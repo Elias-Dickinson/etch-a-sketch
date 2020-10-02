@@ -11,7 +11,7 @@ function reset(){
   const cells = document.querySelectorAll('.cell');
   cells.forEach(cell=>cell.style.backgroundColor = 'white');
   const size = prompt('How many rows and columns do you want your grid to be?');
-  location.reload();
+  //location.reload();
   makeRows(size, size);
 }
 makeRows(4, 4);
