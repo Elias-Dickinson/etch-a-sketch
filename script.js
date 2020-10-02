@@ -9,6 +9,7 @@ const makeRows = (rows, cols) =>{
   }
 }
 const reset = () => {
+  container.innerHTML = '';
   const cells = document.querySelectorAll('.cell');
   cells.forEach(cell=>cell.style.backgroundColor = 'white');
   const size = prompt('How many rows and columns do you want your grid to be?');
