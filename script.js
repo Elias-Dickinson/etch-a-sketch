@@ -8,11 +8,12 @@ const makeRows = (rows, cols) =>{
     cell.addEventListener('mouseover', ()=> cell.style.backgroundColor = 'black');
   }
 }
-makeRows(8, 8);
 const reset = () => {
   const cells = document.querySelectorAll('.cell');
   cells.forEach(cell=>cell.style.backgroundColor = 'white');
   const size = prompt('How many rows and columns do you want your grid to be?');
-  location.reload();
+  //location.reload();
   makeRows(size, size);
 }
+makeRows(16, 16);
+resetBtn.addEventListener('click', ()=>reset());
