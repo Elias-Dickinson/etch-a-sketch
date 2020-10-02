@@ -1,4 +1,5 @@
-function makeRows(rows, cols) {
+const makeRows = (rows, cols) =>{
+  const container = document.querySelector('#container');
   container.style.setProperty('--grid-rows', rows);
   container.style.setProperty('--grid-cols', cols);
   for (c = 0; c < rows * cols; c++) {
@@ -8,11 +9,10 @@ function makeRows(rows, cols) {
   }
 }
 makeRows(8, 8);
-function reset(){
-  container.innerHTML = '';
+const reset = () => {
   const cells = document.querySelectorAll('.cell');
   cells.forEach(cell=>cell.style.backgroundColor = 'white');
   const size = prompt('How many rows and columns do you want your grid to be?');
-  //location.reload();
+  location.reload();
   makeRows(size, size);
 }
